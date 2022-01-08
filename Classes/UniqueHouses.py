@@ -10,6 +10,13 @@ def Uniques(commandString, people):
         employees[j] = DeliveryPeople.Deliverer(str(j), 0, 0)
 
     for i in range(len(commandString)):
-        employees[i % people].update_pos(commandString[i])
+        temp = i % people
+
+        employees[temp].update_pos(commandString[i])
+
+        coords = [employees[temp].x, employees[temp].y]
+
+        if coords not in houses:
+            houses.append(coords)
 
     return len(houses)

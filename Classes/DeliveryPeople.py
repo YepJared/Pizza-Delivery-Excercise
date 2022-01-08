@@ -4,16 +4,26 @@ class Deliverer:
         self.y = y
         self.name = name
 
-    def __repr__(self):
-        print("%s" % (self.name))
-
+    # function to update the coordinates of a delivery person
     def update_pos(self, direction):
         match direction:
+            # South
             case "v":
                 self.y -= 1
-            case "/>":
+
+            # East
+            case ">":
                 self.x += 1
-            case "/^":
+
+            # North
+            case "^":
                 self.y += 1
-            case "/<":
+
+            # West
+            case "<":
                 self.x -= 1
+
+            # Indicate if there is an incorrect input value
+            case _:
+                print("Incorrect command in Input of value %s" % (direction))
+                quit()

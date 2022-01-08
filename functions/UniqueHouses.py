@@ -1,4 +1,4 @@
-import DeliveryPeople
+import classes.DeliveryPeople as DelP
 
 
 def Uniques(commandString, people):
@@ -7,7 +7,7 @@ def Uniques(commandString, people):
     employees = [_ for _ in range(people)]
 
     for j in range(len(employees)):
-        employees[j] = DeliveryPeople.Deliverer(str(j), 0, 0)
+        employees[j] = DelP.Deliverer(str(j), 0, 0)
 
     for i in range(len(commandString)):
         temp = i % people

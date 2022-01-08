@@ -1,8 +1,8 @@
+# Define a class that contains the coordinates of each delivery driver
 class Deliverer:
-    def __init__(self, name, x, y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.name = name
 
     # function to update the coordinates of a delivery person
     def update_pos(self, direction):

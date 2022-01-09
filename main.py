@@ -4,12 +4,11 @@ import functions.UniqueHouses as UniH
 address = input("Please enter file address: ")
 
 # Take the last 4 characters of the address string to help determine file type
-type = address[len(address) - 4:]
-
 # Only continue running code if the file type is .txt
-if type != ".txt":
+if address[len(address) - 4:] != ".txt":
     print("Wrong file type. Please input a \".txt\" file")
     quit()
+
 else:
     f = open(address, 'r')
 

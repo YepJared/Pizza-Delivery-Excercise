@@ -9,12 +9,8 @@ def Uniques(commandString, people):
     houses = [[0, 0]]
 
     # create an array of employees to hold each of their current coordinates
-    employees = [_ for _ in range(people)]
-
-    # convert employee array into objects that contain coordinates
-    # assume starting coordinate is 0,0 for all employees
-    for j in range(len(employees)):
-        employees[j] = DelP.Deliverer(0, 0)
+    # assume starting coordinate is (0, 0) for all employees
+    employees = [DelP.Deliverer(0, 0) for _ in range(people)]
 
     # for each command in the input string, update the current position of the
     # employee and then determine if the house they are at has been visited

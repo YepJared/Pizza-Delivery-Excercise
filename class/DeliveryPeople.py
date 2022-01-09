@@ -23,7 +23,7 @@ class Deliverer:
             case "<":
                 self.x -= 1
 
-            # Indicate if there is an incorrect input value
+            # Indicate if there is an incorrect input value and what it is
             case _:
                 print("Incorrect command in Input of value %s" % (direction))
                 quit()
